@@ -5,29 +5,68 @@ namespace MethodenObjekte
 {
     internal class Program
     {
-        static int seitenlaenge = 10;
         static void Main(string[] args)
         {
+            int seitenlaenge = 0;
+
+            Console.WriteLine("Wähle die Form:");
+            string form = " ";
+            Console.WriteLine("Quadrat, Holes Quadrat, Rechtwinkliges Dreieck, Gleichseitiges Dreieck,\nHoles Gleichseitiges Dreieck, Triforce, Kreis");
+            form = Console.ReadLine();
+
             Console.WriteLine("Gebe die länge an:");
             seitenlaenge = int.Parse(Console.ReadLine());
+            Console.Write("\n");
 
-            Console.Write("\n");
-            Quadrat();
-            Console.Write("\n");
-            HolesQuadrat();
-            Console.Write("\n");
-            RechtwinkligesDreieck();
-            Console.Write("\n");
-            GleichseitigesDreieck();
-            Console.Write("\n");
-            HolesGleichseitigesDreieck();
-            Console.Write("\n");
-            TriForce();
-            Console.Write("\n");
-            Kreis();
+
+            switch (form)
+            {
+            case "Quadrat":
+                {
+                    Quadrat(seitenlaenge);
+                    break;
+                }
+            case "Holes Quadrat":
+                {
+                    HolesQuadrat(seitenlaenge);
+                    break;
+                }
+            case "Rechtwinkliges Dreieck":
+                {
+                    RechtwinkligesDreieck(seitenlaenge);
+                    break;
+                }
+            case "Gleichseitiges Dreieck":
+                {
+                    GleichseitigesDreieck(seitenlaenge);
+                    break;
+                }
+            case "Holes Gleichseitiges Dreieck":
+                {
+                    HolesGleichseitigesDreieck(seitenlaenge);
+                    break;
+                }
+            case "Triforce":
+                {
+                    TriForce(seitenlaenge);
+                    break;
+                }
+            case "Kreis":
+                {
+                    Kreis(seitenlaenge);
+                    break;
+                }
+            default:
+                {
+                    Console.WriteLine("Falsche eingabe!");
+                    break;
+                }
+
+            }
+
         }
 
-        static void Quadrat()
+        static void Quadrat(int seitenlaenge)
         {
             // Wiederholt Zeile
             for (int line = seitenlaenge; line > 0; line--) 
@@ -42,7 +81,7 @@ namespace MethodenObjekte
 
         }
 
-        static void HolesQuadrat()
+        static void HolesQuadrat(int seitenlaenge)
         {
             for (int outer = 0; outer < seitenlaenge; outer++)
             {
@@ -66,7 +105,7 @@ namespace MethodenObjekte
 
         }
 
-        static void RechtwinkligesDreieck()
+        static void RechtwinkligesDreieck(int seitenlaenge)
         {
             for(int line = seitenlaenge; line > 0; line--)
             {
@@ -79,7 +118,7 @@ namespace MethodenObjekte
 
         }
 
-        static void GleichseitigesDreieck()
+        static void GleichseitigesDreieck(int seitenlaenge)
         {
             for (int outer = 0; outer < seitenlaenge; outer++)
             {
@@ -99,7 +138,7 @@ namespace MethodenObjekte
 
         }
 
-        static void HolesGleichseitigesDreieck()
+        static void HolesGleichseitigesDreieck(int seitenlaenge)
         {
             for (int outer = 0; outer < seitenlaenge; outer++)
             {
@@ -126,7 +165,7 @@ namespace MethodenObjekte
             }
 
         }
-        static void TriForce()
+        static void TriForce(int seitenlaenge)
         {
             for (int outer = 0; outer < seitenlaenge; outer++)
             {
@@ -172,7 +211,7 @@ namespace MethodenObjekte
 
         }
 
-        static void Kreis()
+        static void Kreis(int seitenlaenge)
         {
             int _radius = seitenlaenge;
             int _startY = 0;
