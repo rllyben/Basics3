@@ -1,6 +1,6 @@
-﻿using System.Diagnostics.Metrics;
+﻿using System.Data;
 
-namespace PeronenKlasse
+namespace PropertiesUebung
 {
     internal class Program
     {
@@ -13,14 +13,15 @@ namespace PeronenKlasse
             Console.WriteLine("Bitte gebe dein Alter ein:");
             int age = int.Parse(Console.ReadLine());
 
-            Person ich = new Person(name, adress, age);
+            Person ich = new Person();
 
-            ich.SetName(name);
-            ich.SetEmail(adress);
-            ich.SetAlter(age);
+            ich.Name = name;
+            ich.Email = adress;
+            ich.Alter = age;
 
             Console.WriteLine("Drücke eine beliebige Taste zur ausgabe der angegebenen Daten");
             Console.ReadLine();
+            ich.Print();
         }
 
     }
@@ -31,26 +32,20 @@ namespace PeronenKlasse
         private string _email;
         private int _alter;
 
-        public Person(string name, string email, int age)
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public int Alter
         {
-            _names = name;
-            _email = email;
-            _alter = age;
-        }
+            get { return _alter; }
+            set 
+            {
+                if (value < 14 || value > 150)
+                {
+                    throw new Exception("Inkorrekt");
+                }
+                _alter = value; 
+            }
 
-        public void SetName(string name)
-        {
-            _names = name;
-        }
-
-        public void SetEmail(string email)
-        {
-            _email = email;
-        }
-
-        public void SetAlter(int age)
-        {
-            _alter = age;
         }
 
         public void Print()
