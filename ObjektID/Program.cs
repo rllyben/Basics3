@@ -13,6 +13,8 @@
             Console.WriteLine(test3.ObjectID);
             Console.WriteLine(TestKlasse.ObjectCounter);
 
+
+            Console.WriteLine(test1.ToString());
         }
 
     }
@@ -27,6 +29,12 @@
         {
             ObjectCounter++;
             ObjectID = ObjectCounter;
+        }
+
+        // ueberschreiben der ToString()
+        public override string ToString()
+        {
+            return $"Object - ID : {ObjectID} von {ObjectCounter}";
         }
 
     }

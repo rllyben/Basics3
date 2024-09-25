@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstanzUndStatisch", "Insta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjektID", "ObjektID\ObjektID.csproj", "{0738FFF8-D1D9-4764-B6B5-3A8734A75EEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OeBBNameSpace", "OeBBNameSpace\OeBBNameSpace.csproj", "{C1A6EE20-C1F0-4F4F-A065-BDF7E3349FDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{0738FFF8-D1D9-4764-B6B5-3A8734A75EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0738FFF8-D1D9-4764-B6B5-3A8734A75EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0738FFF8-D1D9-4764-B6B5-3A8734A75EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A6EE20-C1F0-4F4F-A065-BDF7E3349FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A6EE20-C1F0-4F4F-A065-BDF7E3349FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A6EE20-C1F0-4F4F-A065-BDF7E3349FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A6EE20-C1F0-4F4F-A065-BDF7E3349FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
